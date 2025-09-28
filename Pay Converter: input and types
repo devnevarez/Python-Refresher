@@ -1,0 +1,14 @@
+# Along with user input we also have to keep track of character types
+# Lets create a script that determines pay per hour
+
+hrs = input("Enter Hours:")
+rate = input("Enter rate:")
+
+# After creating variables we can call, we can now create a formula within its own variable
+# Keeping in mind character types must align to avoid syntax errors
+
+pay = float(hrs) * float(rate)
+
+# We can now call the formula and display the user input
+
+print("Pay: " + str(pay))
