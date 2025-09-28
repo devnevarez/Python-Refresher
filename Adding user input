@@ -1,0 +1,4 @@
+# using the input function allows for users to interact
+
+name = input("Enter your name")
+print("Hello " + name
