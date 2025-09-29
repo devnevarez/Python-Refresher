@@ -12,3 +12,20 @@ pay = float(hrs) * float(rate)
 # We can now call the formula and display the user input
 
 print("Pay: " + str(pay))
+
+# Lets continue
+# Now we can add conditionals, useful for calculating overtime pay
+
+hrs = input("Enter Hours:")
+h = float(hrs)
+rate = input("Enter rate:")
+r = float(rate)
+
+# With if statements we can create code blocks that run if different conditions are met
+
+if h <= 40:
+    print("Pay: " h * r)
+else:
+    reg_time = h * r
+    ot = (h - 40) * (r * .5)
+    print("Pay: " reg_time + ot)
