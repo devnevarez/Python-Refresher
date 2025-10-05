@@ -29,3 +29,28 @@ else:
     reg_time = h * r
     ot = (h - 40) * (r * .5)
     print("Pay: " reg_time + ot)
+
+# Revisiting what I have so far and after completing some more lessons, lets create a function
+
+def computepay(h, r):
+    if h > 40 :
+        return extra_time
+    elif h <= 40 :
+        return reg_time
+    else :
+        quit()
+
+# I think this is a little bit neater as I consider regular time hours and overtime hours otherwise we stop the program
+# all that is left is to define the variables
+
+hrs = input("Enter Hours:")
+h = float(hrs)
+rate = input("Enter Hourly Rate:")
+r = float(rate)
+
+reg_time = h * r
+ot = (h - 40) * (r * .5)
+extra_time = reg_time + ot
+
+p = computepay(h, r)
+print("Pay", p)
