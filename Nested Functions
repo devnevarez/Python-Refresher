@@ -1,0 +1,35 @@
+# Start by defining variables
+
+largest = None
+smallest = None
+
+# Create indefinite loop, while also entering some error checking
+# This functions runs as long as a user does not input the string done
+
+while True:
+    num = input("Enter a number: ")
+    if num == "done":
+        break
+    try:
+        int_num = int(num)
+    except:
+        print("Invalid input")
+        continue
+
+# As long as numbers are entered, we want the program to keep track of the largest and smallest variables
+# Here is a nested function that starts after the error checking 
+# It intializes the user input, compares it to previous input, and stores it in our previous variables
+
+    if largest is None:
+        largest = int_num
+        smallest = int_num
+    else:
+        if int_num > largest:
+            largest = int_num
+        if int_num < smallest:
+            smallest = int_num
+
+# As always we have to display our variables for the user so we use the print statements
+
+print("Maximum is", largest)
+print("Minimum is", smallest)
